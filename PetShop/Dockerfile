@@ -11,7 +11,7 @@ RUN dotnet restore "PetShop/PetShop.csproj"
 WORKDIR "/src/PetShop"
 COPY . .
 
-RUN dotnet build "PetShop/PetShop.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "./PetShop/PetShop.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
