@@ -1,0 +1,8 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "./PetShop/Dockerfile"
+
+[deploy]
+startCommand = "./PetShop"
+restartPolicyType = "always"
+healthcheckPath = "/health"
