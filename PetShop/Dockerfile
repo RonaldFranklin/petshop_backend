@@ -6,7 +6,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["PetShop.csproj", "PetShop/"]
+COPY ["PetShop/PetShop.csproj", "PetShop/"]
 RUN dotnet restore "PetShop/PetShop.csproj"
 WORKDIR "/src/PetShop"
 COPY . .
